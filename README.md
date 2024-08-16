@@ -12,9 +12,7 @@ Vas a poder:
 
 
 Pasos para ver el sitio desde local
-- Desde la opcion Code copiamos el link HTTPS: 
-
-https://github.com/tinchoz8426/las-charris.git
+- Desde la opcion Code copiamos el link HTTPS
 
 - En nuestra terminal elegimos un lugar para clonar la carpeta y escribimos "git clone" + link que copiamos anteriormente
 
