@@ -1,0 +1,28 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Autores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Cargar un Autor </h1> 
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <div style="color:MistyRose">
+                    <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+                    {{ form.nombre }}
+                </div>
+                <div style="color:MistyRose">
+                    <label for="{{ form.apellido.id_for_label }}">Apellido:</label>
+                    {{ form.apellido }}
+                </div>
+                                    
+                <input type="submit" value="Cargar">
+                
+            </form>
+        </div>
+    </div>
+    
+{% endblock main %}

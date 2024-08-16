@@ -1,0 +1,32 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Lectores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: white"> Cargar un Lector </h1> 
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+                <div style="color:MistyRose">
+                    <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+                    {{ form.nombre }}
+                </div>
+                <div style="color:MistyRose">
+                    <label for="{{ form.apellido.id_for_label }}">Apellido:</label>
+                    {{ form.apellido }}
+                </div>
+                <div style="color:MistyRose">
+                    <label for="{{ form.pais.id_for_label }}">País:</label>
+                    {{ form.pais }}
+                </div>           
+                                    
+                <input type="submit" value="Cargar">
+                
+            </form>
+        </div>
+    </div>
+    
+{% endblock main %}

@@ -1,0 +1,34 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Libros {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Cargar un Libro </h1> 
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+                <div style="color:MistyRose">
+                    <label for="{{ form.titulo.id_for_label }}">Título:</label>
+                    {{ form.titulo }}
+                </div>
+                    
+                <div style="color:MistyRose">
+                    <label for="{{ form.autor.id_for_label }}">Autor:</label>
+                    {{ form.autor }}
+                </div>
+
+                <div style="color:MistyRose">
+                    <label for="{{ form.genero.id_for_label }}">Género:</label>
+                    {{ form.genero }}
+                </div>
+
+                <input type="submit" value="Cargar">
+                
+            </form>
+        </div>
+    </div>
+    
+{% endblock main %}

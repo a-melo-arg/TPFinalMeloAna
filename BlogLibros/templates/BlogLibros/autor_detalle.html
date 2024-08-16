@@ -1,0 +1,18 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Autores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Detalle del Autor </h1> 
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <p style="color:MistyRose"> Nombre: <i> {{autor.nombre}} </i></p>
+            <p style="color:MistyRose"> Apellido: <i> {{autor.apellido}} </i></p>
+                        
+            <p> <a href="{% url 'ListaAutor' %}"> Regresar </a> </p>
+        </div>
+    </div>
+{% endblock main %}
+
+

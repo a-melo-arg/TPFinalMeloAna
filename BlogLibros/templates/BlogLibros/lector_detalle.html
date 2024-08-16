@@ -1,0 +1,20 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Lectores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Detalle del Lector </h1> 
+    
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <p style="color:MistyRose"> Nombre: <i> {{lectores.nombre}} </i></p>
+            <p style="color:MistyRose"> Apellido: <i> {{lectores.apellido}} </i></p>
+            <p style="color:MistyRose"> Pais: <i> {{lectores.pais}} </i></p>
+            
+            <p> <a href="{% url 'ListaLector' %}"> Regresar </a>  </p>
+        </div>
+    </div>
+{% endblock main %}
+
+

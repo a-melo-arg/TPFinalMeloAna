@@ -1,0 +1,24 @@
+{% extends 'BlogLibros/base.html' %}
+
+{% load static %}
+
+
+{% block main %}
+{# Este div es para centrar el formulario en la página #}
+    <div class="d-flex justify-content-center">
+    
+        {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+        <div class="d-flex flex-column">
+            <h1 style="color: OrangeRed"> Registro de nuevo usuario </h1> 
+
+            <form style="color: white" action="" method="POST">
+                {% csrf_token %}
+        
+                {{ form.as_p }}
+
+                <input type="submit" value= "Registrarse" >
+            </form>  
+        </div>
+    </div>     
+{% endblock main %}
+

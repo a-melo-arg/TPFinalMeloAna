@@ -1,0 +1,20 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block main %}
+    <h1 style="color: OrangeRed"> Cambiar contraseña </h1>
+
+        <form style="color: BurlyWood" action="" method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            
+            <button type="submit"> Cambiar </button>
+
+        </form>
+{% endblock main %}
+
+
+
+
+

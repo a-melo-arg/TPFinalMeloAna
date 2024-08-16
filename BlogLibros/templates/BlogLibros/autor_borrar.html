@@ -1,0 +1,17 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Autores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Borrar Autor </h1> 
+
+    <form action="" method="POST" >
+        {% csrf_token %}
+        <p style="color:MistyRose"> Estás seguro que deseas borrar al autor <i> {{autor.nombre}} {{autor.apellido}} </i>? </p>
+
+        <input type="submit" value="Eliminar">
+    
+    </form>
+
+{% endblock main %}

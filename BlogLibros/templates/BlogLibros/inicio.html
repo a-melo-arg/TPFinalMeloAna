@@ -1,0 +1,12 @@
+{% extends "BlogLibros/base.html" %}
+{% load static %}
+
+{% block main %}
+
+    <h1 style="color:DarkGoldenrod"> Bienvenidos al blog de literatura!!  </h1>
+
+    {% if request.user.is_authenticated %}
+    <h2 style="color:LightSalmon"> Bienvenido {{user}} </h2>
+    {% endif %}
+
+{% endblock main %}

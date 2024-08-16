@@ -1,0 +1,23 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Autores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color:BurlyWood"> Listado de Autores </h1> 
+
+    <a href= "{% url 'NuevoAutor' %}"> Cargar Nuevo Autor </a>
+    
+    {% for autor in autores %}
+        <li style="color:Brown"> {{autor.nombre}}, {{autor.apellido}}
+            <p>
+                <a href= "{% url 'DetalleAutor' autor.pk %}"> Ver </a>                 
+                <a href= "{% url 'EditarAutor' autor.pk %}"> Editar </a> 
+                <a href= "{% url 'BorrarAutor' autor.pk %}"> Borrar </a> 
+            </p>
+            
+        </li>
+    {% endfor %}
+    
+
+{% endblock main %}

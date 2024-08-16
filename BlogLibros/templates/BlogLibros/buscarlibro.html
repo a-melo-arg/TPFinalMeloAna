@@ -1,0 +1,17 @@
+{% extends 'BlogLibros/base.html' %}
+
+{% load static %}
+
+{% block titulo %} Buscar un Libro {%endblock titulo%}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Que libro desea buscar? </h1> 
+
+    <form action="buscar_libro" method="GET">
+        
+        <input type="text" name="librobuscado">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+{% endblock main %}

@@ -1,0 +1,23 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Lectores {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color:BurlyWood"> Listado de Lectores </h1> 
+
+    <a href= "{% url 'NuevoLector' %}"> Cargar Nuevo Lector </a>
+    
+    {% for lector in lectores %}
+        <li style="color:Brown"> {{lector.nombre}}, {{lector.apellido}}
+            <p>
+                <a href= "{% url 'DetalleLector' lector.pk %}"> Ver </a>                 
+                <a href= "{% url 'EditarLector' lector.pk %}"> Editar </a> 
+                <a href= "{% url 'BorrarLector' lector.pk %}"> Borrar </a> 
+            </p>
+            
+        </li>
+    {% endfor %}
+    
+
+{% endblock main %}

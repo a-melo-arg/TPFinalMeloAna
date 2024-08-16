@@ -1,0 +1,23 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Libros {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color:BurlyWood"> Listado de Libros </h1> 
+
+    <a href= "{% url 'NuevoLibro' %}"> Cargar Nuevo Libro </a>
+    
+    {% for libro in libros %}
+        <li style="color:Brown"> {{libro.titulo}}
+            <p>
+                <a href= "{% url 'DetalleLibro' libro.pk %}"> Ver </a>                 
+                <a href= "{% url 'EditarLibro' libro.pk %}"> Editar </a> 
+                <a href= "{% url 'BorrarLibro' libro.pk %}"> Borrar </a> 
+            </p>
+            
+        </li>
+    {% endfor %}
+    
+
+{% endblock main %}

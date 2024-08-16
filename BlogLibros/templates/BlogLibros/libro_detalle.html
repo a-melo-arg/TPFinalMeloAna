@@ -1,0 +1,20 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block titulo %} Libros {% endblock titulo %}
+
+{% block main %}
+    <h1 style="color: BurlyWood"> Detalle del Libro </h1> 
+
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <p style="color:MistyRose"> Nombre: <i> {{libro.titulo}} </i></p>
+            <p style="color:MistyRose"> Autor: <i> {{libro.autor}} </i></p>
+            <p style="color:MistyRose"> Genero: <i> {{libro.genero}} </i></p>
+            
+            <p> <a href="{% url 'ListaLibros' %}"> Regresar </a> </p>
+        </div>
+    </div>
+{% endblock main %}
+
+
